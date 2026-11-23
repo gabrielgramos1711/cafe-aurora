@@ -2,7 +2,7 @@
 
 Site de página única de uma cafeteria fictícia, feito com **HTML, CSS e JavaScript puros** (sem frameworks e sem dependências externas). Projeto acadêmico focado em **acessibilidade (WCAG 2.1 AA)**, **usabilidade** e **psicologia das cores**.
 
-🔗 **Site online:** [inserir o link do GitHub Pages, ex.: https://SEU-USUARIO.github.io/cafe-aurora/]
+🔗 **Site online:** (https://github.com/gabrielgramos1711/cafe-aurora)
 
 ## Funcionalidades
 
