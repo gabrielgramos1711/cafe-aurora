@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Café Aurora</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<header>
+  <span class="logo">☕ Café Aurora</span>
+  <nav role="tablist" aria-label="Seções do site">
+    <button role="tab" data-tab="inicio" aria-selected="true">Início</button>
+    <button role="tab" data-tab="cardapio" aria-selected="false">Cardápio</button>
+    <button role="tab" data-tab="contato" aria-selected="false">Contato</button>
+    <button role="tab" data-tab="login" aria-selected="false">Login</button>
+    <button role="tab" data-tab="acess" aria-selected="false">Acessibilidade</button>
+    <button id="theme" aria-pressed="false">🌙 Modo escuro</button>
+  </nav>
+</header>
+
+<main id="main">
+<section id="inicio" role="tabpanel">
+  <div class="hero"><h1>Cada manhã merece uma Aurora</h1><p>Cafés especiais, pães artesanais e um cantinho para desacelerar.</p></div>
+  <div class="carousel" aria-roledescription="carrossel" aria-label="Destaques">
+    <div class="slide s1 on"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 22h36v16a14 14 0 0 1-14 14h-8a14 14 0 0 1-14-14z" fill="#fff"/><path d="M46 26h6a6 6 0 0 1 0 12h-6" fill="none" stroke="#fff" stroke-width="4"/></svg><p><strong>Grãos de origem única</strong></p><p>Torra média, notas de chocolate.</p></div>
+    <div class="slide s2"><svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="36" rx="24" ry="16" fill="#fff"/><path d="M14 30q18-14 36 0" fill="none" stroke="#c06a1a" stroke-width="3"/></svg><p><strong>Pão de queijo quentinho</strong></p><p>Saindo do forno a cada hora.</p></div>
+    <div class="slide s3"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 8C14 20 14 44 32 56c18-12 18-36 0-48z" fill="#fff"/><path d="M32 14v40" stroke="#5a7a43" stroke-width="3"/></svg><p><strong>Embalagens sustentáveis</strong></p><p>Copos compostáveis e desconto para quem traz o seu.</p></div>
+    <div class="car-ctl">
+      <button class="btn" id="prev" aria-label="Slide anterior">‹</button>
+      <span id="dots"></span>
+      <button class="btn" id="next" aria-label="Próximo slide">›</button>
+      <button class="btn" id="pause" aria-pressed="false">⏸ Pausar</button>
+    </div>
+  </div>
+  <h2>Por que a Aurora?</h2>
+  <div class="grid">
+    <article class="card"><div class="ico" aria-hidden="true">🌱</div><h3>Origem responsável</h3><p>Compramos direto de pequenos produtores com preço justo.</p></article>
+    <article class="card"><div class="ico" aria-hidden="true">🪑</div><h3>Ambiente acolhedor</h3><p>Wi‑Fi, tomadas e música suave para trabalhar ou conversar.</p></article>
+    <article class="card"><div class="ico" aria-hidden="true">♿</div><h3>Acessível a todos</h3><p>Espaço sem degraus e cardápio em fonte ampliada.</p></article>
+  </div>
+</section>
+
+<section id="cardapio" role="tabpanel" hidden>
+  <h2>Pesquise no cardápio</h2>
+  <div class="bar">
+    <input id="q" type="search" placeholder="Buscar item…" aria-label="Buscar item do cardápio">
+    <select id="cat" aria-label="Filtrar por categoria"><option value="">Todas</option><option>Bebidas</option><option>Salgados</option><option>Doces</option></select>
+  </div>
+  <p id="count" aria-live="polite"></p>
+  <div class="grid" id="menu"></div>
+</section>
+
+<section id="contato" role="tabpanel" hidden>
+  <h2>Fale com a gente</h2>
+  <form id="fc" novalidate>
+    <div><label for="cn">Nome</label><input id="cn" autocomplete="name" aria-describedby="en"><div class="err" id="en"></div></div>
+    <div><label for="ce">E-mail</label><input id="ce" type="email" autocomplete="email" aria-describedby="ee"><div class="err" id="ee"></div></div>
+    <div><label for="cs">Assunto</label><select id="cs"><option>Dúvida</option><option>Reserva</option><option>Elogio ou sugestão</option></select></div>
+    <div><label for="cm">Mensagem</label><textarea id="cm" rows="4" aria-describedby="em"></textarea><div class="err" id="em"></div></div>
+    <button class="btn primary" type="submit">Enviar mensagem</button>
+    <div id="cok" class="ok" role="status"></div>
+  </form>
+</section>
+
+<section id="login" role="tabpanel" hidden>
+  <h2>Entrar no Clube Aurora</h2>
+  <form id="fl" novalidate>
+    <div><label for="le">E-mail</label><input id="le" type="email" autocomplete="username" aria-describedby="lee"><div class="err" id="lee"></div></div>
+    <div><label for="lp">Senha</label><input id="lp" type="password" autocomplete="current-password" aria-describedby="lpe"><div class="err" id="lpe"></div></div>
+    <label style="font-weight:400"><input type="checkbox" id="show" style="width:auto"> Mostrar senha</label>
+    <button class="btn primary" type="submit">Entrar</button>
+    <div id="lok" class="ok" role="status"></div>
+  </form>
+  <p>Demonstração: qualquer e‑mail válido e senha com 6+ caracteres.</p>
+</section>
+
+<section id="acess" role="tabpanel" hidden>
+  <h2>Acessibilidade</h2>
+  <p>Ajuste o site às suas necessidades. Suas escolhas ficam salvas neste navegador.</p>
+  <div class="a11y">
+    <button class="btn" id="fm">A− Diminuir fonte</button>
+    <button class="btn" id="fp">A+ Aumentar fonte</button>
+    <button class="btn" id="fr">Fonte padrão</button>
+    <button class="btn" id="hc" aria-pressed="false">Alto contraste</button>
+    <button class="btn" id="rm" aria-pressed="false">Reduzir animações</button>
+  </div>
+  <p>Tamanho atual da fonte: <strong id="fs">100%</strong></p>
+</section>
+</main>
+
+<footer>
+  <p>© 2026 Café Aurora · Rua das Flores, 120 · Seg–Sáb 7h–19h</p>
+  <p>Projeto acadêmico · Segue as diretrizes WCAG 2.1 nível AA</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
